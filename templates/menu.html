@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>
+  菜單:
+</h1>
+<table>
+{% for food in menu %}
+
+  <tr>
+    <td style='width: 500px;'><img src=../{{food.photo}}/></td>
+    <td style='width: 128px;text-align:center;text-valign:center;'>{{food.food}}</td>
+    <td style='width: 128px;text-align:center;text-valign:center;'>{{food.price}} NT</td>
+  </tr>
+
+{% endfor %}
+</table>
+
+{% endblock %}
